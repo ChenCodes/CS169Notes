@@ -1,0 +1,12 @@
+August 30
+
+Legacy code: old SW that meets customer's needs
+17% for fixing bugs
+60% SW maintenance costs adding new functionality to legacy SW
+
+Validation: did you build the right thing? Solve the problem?
+  What is the agile approach to validation? - lots of testing
+  
+  Coverage: various measurements of what % of system is exercised by test suite
+  
+  Raise level of abstraction: 
