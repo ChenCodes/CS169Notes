@@ -1,0 +1,37 @@
+Regexp:
+
+Phone numbers (with area code): 
+  re = /^\s+\(\d\d\d)/([\s0-9]+)
+  \s -> whitespace 
+  + -> one or more
+  \d -> 0-9
+  
+  ( ) -> whatever is inside, we will remember that subset of the match for future use
+  
+  \d\d\d -> (#)(#)(#)
+  
+  
+  
+  class Account 
+    attr_accessor :balance
+    include Comparable
+    def <=>(other)
+      self.balance <=> other.balance
+    end
+    
+    def initialize(balance)
+      @balance = balance
+    end
+    
+  end
+  
+  a = Account.new(50)
+  b = Account.new(60)
+  c = Account.new(100)
+  
+  c.between?(a, b)
+  
+  Get modules behaviors for free. 
+      
+  
+  
