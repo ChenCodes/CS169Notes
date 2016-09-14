@@ -1,0 +1,29 @@
+
+Cookie: Maintaining state btw. a browser and a Saas Server. 
+  Since the amount of information associated with a user's session is too much for storage in a cookie, we instead store a pointer to state that lives in a database in the cookie. 
+
+Self Check Question: Enumerate the minimal game state that must be maintained during a game of Hangperson
+    Minimal state: The secret word, the current letters guessed, and how many are left. 
+    
+Self Check question: Enumerate the player actions that could cause changes in the state.
+
+  1. Guessing a letter: modifying the lists of correct/incorrect guesses, resulting in winning/losing the game.
+  
+  2. Starting a new game: choosing a new word and then we need to set the incorrect guess lists to empty. 
+  
+  
+When setting up the entire web thing, we want to consider three things:
+
+Route and Action        Resource Operation                         Web Result
+'GET /show'             show game state                            display correct and wrong guesses so far
+'POST/guess'            update game state with new guessed letter  redirect to show
+'POST/create'           create new game            redirect to show 
+
+POSTING IS IMPORTANT:
+To start a new game, user needs to post a form that triggers the create actio.
+
+'Get/new'    give human user a chance to start new game      display a form that includes a "start new game" button 
+
+
+
+
